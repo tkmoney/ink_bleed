@@ -20,6 +20,14 @@ npm run preview
 
 The production site is generated in `dist`. No backend, API keys, or remote image uploads are involved.
 
+## GitHub Pages
+
+The site is published at **https://tkmoney.github.io/ink_bleed/**.
+
+`.github/workflows/deploy-pages.yml` builds and deploys on pushes to `master`, or manually through Actions > Deploy to GitHub Pages > Run workflow. The build uses Node.js 22, installs locked dependencies with `npm ci`, and uploads only `dist`. Deployment uses the `github-pages` environment and GitHub's built-in token; no personal token or deployment secret is needed.
+
+The workflow gets the site's base path from GitHub Pages and sets `PAGES_BASE_PATH` for Vite, so scripts, styles, the favicon, and the paper texture work under `/ink_bleed/`. Local development and normal builds retain their root base path. Repository Settings > Pages > Source must be **GitHub Actions**.
+
 ## Use
 
 The ink is centered on the full-screen paper. A single compact **Controls** pane contains the interface; click its title to collapse it. It starts collapsed on phones. Source settings, Appearance, Advanced, and Actions are folded until needed, and their state survives source/model changes.
