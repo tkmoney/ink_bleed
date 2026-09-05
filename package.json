@@ -1,0 +1,22 @@
+{
+  "name": "ink-bleed-studio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@tweakpane/core": "^2.0.5",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "pixi.js": "^8.20.1",
+    "tweakpane": "^4.0.5"
+  }
+}
